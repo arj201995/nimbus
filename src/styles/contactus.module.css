@@ -1,0 +1,14 @@
+.link {
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+
+.heading {
+    font-family: 'Titan One', cursive !important;
+}
+
+.send__button {
+    background-color: #333333 !important;
+    color: #ffffff;
+}

@@ -1,0 +1,16 @@
+.footer {
+    height: 18rem;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.footer__logo {
+    height: 8rem;
+    margin-bottom: 0.5rem;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    outline: none;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Titan+One&display=swap');
+
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.aboutus_font {
+    margin-top: 1rem;
+    font-family: 'Titan One', cursive !important;
+}
+
+.ceo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/bgceo.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 65vh;
+    position: relative;
+}
+
+
+.abouttheceo {
+    text-align: center;
+    padding: 2rem 4rem;
+    line-height: 1.8rem;
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.aboutuscard_details {
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.aboutus_content {
+    margin: 0rem 2rem;
+    margin-top: 2rem;
+}
+
+
+@media only screen and (max-width: 530px) {
+    .aboutuscard_details {
+        margin: 0rem 1rem;
+        font-size: 1rem;
+        font-weight: 800;
+        text-align: justify;
+    }
+
+    .aboutus_content {
+        margin: 0rem 1rem;
+    }
+
+    .aboutus_font {
+        margin-top: 0rem;
+        font-size: 1.6rem;
+    }
+
+    .ceo {
+        height: 80vh;
+    }
+
+    .abouttheceo {
+        padding: 2rem 1.5rem;
+        text-align: justify !important;
+        color: white;
+    }
+
+    .abouttheceo>h6 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}

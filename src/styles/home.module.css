@@ -1,0 +1,54 @@
+.lpage {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.bgvideo {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.bgoverlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.text {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    color: white;
+}
+
+@media only screen and (max-width: 850px) {
+
+
+    .text>h3,
+    .text>h4 {
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+
+
+    .text>h3,
+    .text>h4 {
+        font-size: 1.4rem !important;
+        text-align: center;
+    }
+}
