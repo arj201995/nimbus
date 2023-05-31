@@ -55,7 +55,7 @@ export const Header = () => {
     };
 
     return (
-        <AppBar position="static" elevation={10} >
+        <AppBar position="static">
             <Container maxWidth="xl" >
                 <Toolbar disableGutters  >
                     <img src={Logo} className={classes.logo} alt="Nimbus Superior" />

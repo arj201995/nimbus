@@ -43,7 +43,7 @@ export const AboutUsDetails = () => {
                 </Typography>
             </CardContent>
         </StyledCard>
-        <StyledCard elevation={6} sx={{ flexDirection: 'column-reverse !important' }}>
+        <StyledCard elevation={6} sx={{ flexDirection: { sm: 'row !important', xs: 'column-reverse !important' } }}>
             <CardContent sx={{ width: { sm: '90%', md: '100%', lg: '100%' } }}>
                 <Typography variant="h7" sx={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: '1.6rem' }} >
                     Our approach is centered around partnership. We believe that a successful engagement requires a deep understanding of your unique business needs, values, and objectives. We take the time to immerse ourselves in your organization, becoming an extension of your HR team. By aligning our strategies and processes with your company's vision, we create a seamless and efficient recruitment ecosystem that is tailored to your specific requirements.

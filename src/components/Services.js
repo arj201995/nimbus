@@ -58,7 +58,7 @@ export const Services = () => {
         </Box>
 
         <div className={classes.service_content_container} >
-            {services.map((service, index) => <Card key={`${service.imgUrl}`} sx={{ display: 'flex', flexDirection: { md: `${index % 2 === 0 ? 'row-reverse' : 'row'}`, xs: "column" }, gap: '0.5rem', padding: '1rem' }}>
+            {services.map((service, index) => <Card key={`${service.imgUrl}b-${index}`} sx={{ display: 'flex', flexDirection: { md: `${index % 2 === 0 ? 'row-reverse' : 'row'}`, xs: "column" }, gap: '0.5rem', padding: '1rem' }}>
                 <CardMedia component="img" alt={service.title} src={service.imgUrl} loading="lazy" sx={{ width: { sm: '30%', xs: "100%" } }} />
                 <CardContent>
                     <Typography variant="h4" fontFamily="Titan One" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' }, marginBottom: { xs: '0.5rem' }, textAlign: { xs: 'center', md: 'justify' } }} >{service.title}</Typography>
