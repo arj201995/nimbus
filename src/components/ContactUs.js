@@ -12,7 +12,7 @@ export const ContactUs = () => {
 
     return <Grid container my={6} sx={{ height: '70vh' }} >
         <Grid item container lg={6}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-end', justifyContent: 'center' }} >
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: { xs: 'center', sm: 'flex-end' }, justifyContent: 'center' }} >
                 <Box sx={{ display: 'flex', gap: '0.4rem' }}>
 
                     <PhoneIcon sx={{ fontSize: '4rem' }} />

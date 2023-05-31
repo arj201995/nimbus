@@ -9,8 +9,8 @@ import { routes } from "../utils/routes";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
-    return <Grid container className={classes.footer}>
-        <Grid lg={4} md={4} xs={12} sm={12} container item justifyContent="center" alignItems="center" direction="column">
+    return <Grid container className={classes.footer} >
+        <Grid lg={4} md={4} xs={12} sm={12} container item justifyContent="center" alignItems="center" paddingBottom="0.5rem" direction="column">
             <img src={Logo} alt="logo" className={classes.footer__logo} />
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} >
                 <Box sx={{ display: 'flex', gap: '0.4rem' }}>
@@ -34,7 +34,7 @@ export const Footer = () => {
             </Box>
 
         </Grid>
-        <Grid item container lg={4} md={4} sm={12} xs={12} direction="column" alignItems="center" sx={{ backgroundColor: '#8a8986' }} >
+        <Grid item container lg={4} md={4} sm={12} xs={12} direction="column" justifyContent="flex-start" alignItems="center" paddingBottom="2rem" sx={{ backgroundColor: '#8a8986' }} >
             <Typography variant="h6" my={5}>Quick Links</Typography>
             {
                 routes.map((route, index) => <Typography key={`${route.name}+${index}`} variant="h7" component={Link} className={classes.link} to={`${route.link}`} sx={{ lineHeight: '1.6rem' }}>
@@ -42,7 +42,7 @@ export const Footer = () => {
                 </Typography>)
             }
         </Grid>
-        <Grid item container lg={4} md={4} sm={12} xs={12} justifyContent="center" alignItems="center">
+        <Grid item container lg={4} md={4} sm={12} xs={12} justifyContent="center" alignItems="center" paddingBottom="0.5rem" sx={{ padding: { xs: '1rem 2rem', sm: '0rem' }, height: { xs: '10rem', sm: 'inherit' } }} >
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
                 <Typography component="a" href="https://linkedin.com/" className={classes.link} >
                     <LinkedInIcon />
@@ -51,7 +51,7 @@ export const Footer = () => {
                     Join our community or say hello.
                 </Typography>
             </Box>
-            <Typography variant="h7" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+            <Typography variant="h7" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }} >
                 Copyright © 2022-23. All rights reserved.
                 <Box component="span" sx={{ textDecoration: 'underline' }} >
                     Nimbus Superior

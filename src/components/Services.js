@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Divider, Typography } from "@mui/material"
 import ServiceHome from '../assets/services.jpg'
 import classes from '../styles/services.module.css'
+import { LazyLoadComponent } from "react-lazy-load-image-component"
 
 export const services = [{
     title: 'Offshore Recruiters',
@@ -50,7 +51,7 @@ export const Services = () => {
                     <Typography variant="h3" fontFamily="Titan One">
                         Exclusive Services
                     </Typography>
-                    <Typography variant="h6" sx={{ fontSize: { xs: '1rem', sm: '1.3rem' } }} >
+                    <Typography variant="h6" sx={{ fontSize: { xs: '0.915rem', sm: '1.3rem' } }} >
                         Welcome to Nimbus Superior, where we offer a comprehensive suite of services designed to transform your talent acquisition process. With a focus on delivering exceptional results, our dedicated team of recruitment experts takes charge of sourcing, screening, and selecting top-tier candidates for your organization. We leverage cutting-edge technology and data-driven insights to identify the most suitable talent, ensuring a perfect fit for your company culture and objectives.
                     </Typography>
                 </div>
@@ -59,11 +60,14 @@ export const Services = () => {
 
         <div className={classes.service_content_container} >
             {services.map((service, index) => <Card key={`${service.imgUrl}b-${index}`} sx={{ display: 'flex', flexDirection: { md: `${index % 2 === 0 ? 'row-reverse' : 'row'}`, xs: "column" }, gap: '0.5rem', padding: '1rem' }}>
-                <CardMedia component="img" alt={service.title} src={service.imgUrl} loading="lazy" sx={{ width: { sm: '30%', xs: "100%" } }} />
+                <LazyLoadComponent effect="blur"
+                 >
+                    <CardMedia component="img" alt={service.title} src={service.imgUrl} loading="lazy" sx={{ width: { sm: '30%', xs: "100%" } }} />
+                </LazyLoadComponent>
                 <CardContent>
                     <Typography variant="h4" fontFamily="Titan One" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' }, marginBottom: { xs: '0.5rem' }, textAlign: { xs: 'center', md: 'justify' } }} >{service.title}</Typography>
                     <Divider />
-                    <Typography variant="h7" fontWeight="bold" align="justify" lineHeight="1.7rem">{service.details}</Typography>
+                    <Typography variant="h7" fontWeight="bold" sx={{ textAlign: 'justify' }} lineHeight="1.7rem">{service.details}</Typography>
                 </CardContent>
             </Card>)
             }
