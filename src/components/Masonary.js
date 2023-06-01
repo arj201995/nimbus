@@ -4,7 +4,6 @@ import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 import { styled } from '@mui/material/styles';
 import { departments } from '../utils/departments';
-import Logo from '../assets/logo.png'
 
 const Label = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -31,7 +30,6 @@ export const ImageMasonry = () => {
                         <img
                             src={`${item.imgUrl}?w=162&auto=format`}
                             srcSet={`${item.imgUrl}?w=162&auto=format&dpr=2 2x`}
-                            placeholderSrc={Logo}
                             alt={item.title}
                             loading="lazy"
                             style={{
