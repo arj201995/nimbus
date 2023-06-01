@@ -3,7 +3,7 @@ import { StyledButton } from "./styledComponents/StyledComponents"
 
 
 export const ContactForm = ({ button }) => {
-    return <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} noValidate
+    return <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} noValidate
         autoComplete="off" >
         <Box sx={{ display: 'flex', gap: '1rem' }} >
             <TextField fullWidth variant="outlined" type="text" name="firstName" label="First Name" size="small" />

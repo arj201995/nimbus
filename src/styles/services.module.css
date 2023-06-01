@@ -1,5 +1,5 @@
 .service__container {
-    margin-top: 1rem;
+    margin: 0rem;
 }
 
 .service_img_container {
@@ -43,7 +43,7 @@
 @media only screen and (max-width: 530px) {
     .service_img {
         width: 100%;
-        height: 25rem;
+        height: 22rem;
     }
 
     .service__content {

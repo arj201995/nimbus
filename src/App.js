@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@emotion/react';
 import { theme } from './utils/theme';
 import { Header } from './components/Header';
-import { Container } from '@mui/material';
 import { Footer } from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 
@@ -14,15 +13,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <Container>
-        <Suspense fallback={<Loader />} >
-          <Routes>
-            {
-              routes.map((route, index) => <Route key={`${index}+${route.link}`} path={route.link} element={route.element} />)
-            }
-          </Routes>
-        </Suspense>
-      </Container>
+      <Suspense fallback={<Loader />} >
+        <Routes>
+          {
+            routes.map((route, index) => <Route key={`${index}+${route.link}`} path={route.link} element={route.element} />)
+          }
+        </Routes>
+      </Suspense>
       <Footer />
     </ThemeProvider>
   );

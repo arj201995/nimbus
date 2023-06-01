@@ -7,20 +7,21 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 
 const StyledCard = styled(Card)(({ theme }) => ({
-    display: 'flex', marginTop: '0.5rem', height: '50%',
+    display: 'flex', width: '90%', margin: 'auto', marginTop: '0.5rem',
     [theme.breakpoints.down("md")]: {
         flexDirection: 'column-reverse',
         alignItems: 'center',
         justifyContent: 'center',
     },
     [theme.breakpoints.down('sm')]: {
-        // marginTop: '5rem'
-
+        width: '100%',
     }
 }))
 
 const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
-    height: '30rem',
+    height: '28rem',
+    width: '30%',
+    padding: '1rem',
     [theme.breakpoints.down("md")]: {
         height: '25rem',
         width: '40%',
@@ -45,7 +46,7 @@ export const AboutUs = () => {
     }
 
     return <div className={classes.aboutus} >
-        <StyledCard elevation={6} >
+        <StyledCard elevation={6}>
             <CardContent>
                 <Box>
                     <Typography variant="h3" align='center' className={classes.aboutus_font} >About Us</Typography>
@@ -53,7 +54,7 @@ export const AboutUs = () => {
                         <Typography variant='h6' className={classes.aboutuscard_details} >
                             Welcome to Nimbus Superior, your trusted partner in Recruitment Outsourcing. We are a dedicated team of experts who are passionate about revolutionizing the way organizations attract, engage, and retain top talent.
                         </Typography>
-                        <StyledButton variant='contained' endIcon={<ArrowRightAltIcon />} fullWidth size="small" sx={{ fontWeight: 'bold', marginTop: '2rem' }} onClick={NavigateToDetails} >
+                        <StyledButton variant='contained' endIcon={<ArrowRightAltIcon />} fullWidth size="small" sx={{ fontWeight: 'bold', marginTop: '4rem' }} onClick={NavigateToDetails} >
                             Know Us More
                         </StyledButton>
                     </Box>

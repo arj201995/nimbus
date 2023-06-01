@@ -17,6 +17,8 @@
     background-position: center;
     background-size: cover;
     height: 65vh;
+    width: 90%;
+    margin: auto;
     position: relative;
 }
 
@@ -36,8 +38,8 @@
 }
 
 .aboutus_content {
-    margin: 0rem 2rem;
-    margin-top: 2rem;
+    margin: 2rem;
+
 }
 
 
@@ -59,13 +61,16 @@
     }
 
     .ceo {
-        height: 82vh;
+        height: 50rem;
+        width: 100%;
+
     }
 
     .abouttheceo {
         padding: 2rem 1.5rem;
         text-align: justify !important;
         color: white;
+
     }
 
     .abouttheceo>h6 {
