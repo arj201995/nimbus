@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -15,8 +14,9 @@ import { routes } from '../utils/routes';
 import { Link, NavLink } from 'react-router-dom'
 import { Menus } from './Menus';
 import styled from '@emotion/styled';
+import { Dialog, Slide } from '@mui/material';
 
-
+import CloseIcon from '@mui/icons-material/Close';
 
 
 export const StyledMenu = styled(Menu)({
@@ -28,10 +28,22 @@ export const StyledMenu = styled(Menu)({
     }
 })
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
+
 export const Header = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const handleClick = (event, routeName) => {
         if (routeName === 'Services') {
@@ -39,91 +51,61 @@ export const Header = () => {
         }
     };
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    // const handleOpenUserMenu = (event) => {
-    //     setAnchorElUser(event.currentTarget);
-    // };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
 
     const handleCloseUserMenu = () => {
+        setAnchorEl(null)
         setAnchorElUser(null);
     };
 
     return (
         <AppBar position="static">
-            <Container maxWidth="xl" >
-                <Toolbar disableGutters  >
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
                     <img src={Logo} className={classes.logo} alt="Nimbus Superior" />
-
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+                        {!open && <IconButton
                             size="large"
                             aria-label="account of current user"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
+                            onClick={handleClickOpen}
                             color="inherit"
                         >
                             <MenuIcon />
-                        </IconButton>
-                        <StyledMenu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'right',
-                            }}
+                        </IconButton>}
+
+
+                        <Dialog
+                            open={open}
+                            TransitionComponent={Transition}
                             keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
+                            onClose={handleClose}
+                            aria-describedby="alert-dialog-slide-description"
+                            fullScreen
                             sx={{
-                                display: { xs: 'block', md: 'none' },
-                                '& .MuiList-root': {
+                                '& .MuiDialog-paper': {
                                     display: 'flex',
+                                    background: 'rgba(0,0,0,0.8)',
                                     flexDirection: 'column',
-                                    width: '8rem',
-                                    padding: '0rem',
                                     justifyContent: 'center',
-                                    alignItems: 'center',
                                 }
                             }}
                         >
+                            <IconButton sx={{ position: 'fixed', top: '1rem', right: '1rem' }} onClick={handleClose}>
+                                <CloseIcon sx={{ fontWeight: 'bold', color: 'white', fontSize: "2rem" }} />
+                            </IconButton>
                             {routes.map((route) => {
-                                return <MenuItem key={`${route.name}/${route.link}`} onClick={handleCloseUserMenu}>
-                                    <Button size="small" sx={{ fontWeight: 'bold', color: '#ffffff' }} component={Link} to={route.link}>{route.name}</Button>
+                                return <MenuItem key={`${route.name}/${route.link}`} onClick={handleClose} >
+                                    <Button fullWidth size="small" sx={{ fontWeight: 'bold', color: '#ffffff', fontSize: '1.3rem' }} component={Link} to={route.link}>{route.name}</Button>
                                 </MenuItem>
 
                             }
                             )}
-                        </StyledMenu>
+
+                        </Dialog>
                     </Box>
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', marginRight: '3rem' }}>
                         {routes.map((route) => (
                             <Button
                                 key={route.name}
