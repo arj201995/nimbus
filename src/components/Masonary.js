@@ -28,8 +28,8 @@ export const ImageMasonry = () => {
                 {departments.map((item, index) => (
                     <div key={`${item.imgUrl}-${index}`}>
                         <img
-                            src={`${item.imgUrl}?w=162&auto=format`}
-                            srcSet={`${item.imgUrl}?w=162&auto=format&dpr=2 2x`}
+                            src={`${item.imgUrl}`}
+                            srcSet={`${item.imgUrl}`}
                             alt={item.title}
                             loading="lazy"
                             style={{
@@ -37,6 +37,7 @@ export const ImageMasonry = () => {
                                 borderBottomRightRadius: 4,
                                 display: 'block',
                                 width: '100%',
+                                height: '90%'
                             }}
                         />
                         <Label>{item.title}</Label>

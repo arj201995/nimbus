@@ -107,15 +107,18 @@ export const Header = () => {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', marginRight: '3rem' }}>
                         {routes.map((route) => (
-                            <Button
-                                key={route.name}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                                component={NavLink}
-                                to={route.link}
-                                onMouseEnter={(event) => handleClick(event, route.name)}
-                            >
-                                {route.name}
-                            </Button>
+                            <div>
+
+                                <Button
+                                    key={route.name}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                    component={NavLink}
+                                    to={route.link}
+                                    onMouseEnter={(event) => handleClick(event, route.name)}
+                                >
+                                    {route.name}
+                                </Button>
+                            </div>
                         ))}
                         <Menus anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
                     </Box>
