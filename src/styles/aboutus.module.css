@@ -13,7 +13,7 @@
 }
 
 .ceo {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/bgceo.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/bgceo.webp');
     background-position: center;
     background-size: cover;
     height: 65vh;

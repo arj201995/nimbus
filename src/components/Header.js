@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.webp'
 import classes from '../styles/header.module.css'
 import { routes } from '../utils/routes';
 import { Link, NavLink } from 'react-router-dom'

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardMedia, Typography } from '@mui/material'
-import AboutUsDetailsImg from '../assets/aboutus.jpg'
-import Partnership from '../assets/partnership.jpg'
-import Trust from '../assets/trust.jpg'
+import AboutUsDetailsImg from '../assets/aboutus.webp'
+import Partnership from '../assets/partnership.webp'
+import Trust from '../assets/trust.webp'
 import classes from '../styles/aboutusdetails.module.css'
 import styled from '@emotion/styled'
 

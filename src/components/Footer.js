@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material"
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.webp'
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

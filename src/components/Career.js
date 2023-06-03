@@ -1,8 +1,8 @@
 import { Hero } from "./Hero"
 import Careers from '../assets/careers.mp4'
 import { Card, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material"
-import Recruiters from '../assets/recruiters1.jpg'
-import EmailMarketing from '../assets/emailmarketing.jpg'
+import Recruiters from '../assets/recruiters1.webp'
+import EmailMarketing from '../assets/emailmarketing.webp'
 import { ContactForm } from "./ContactForm"
 
 export const Career = () => {

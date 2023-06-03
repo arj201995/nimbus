@@ -1,5 +1,5 @@
 import classes from '../styles/aboutus.module.css'
-import AboutUsImg from '../assets/aboutus1.jpg'
+import AboutUsImg from '../assets/aboutus1.webp'
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { StyledButton } from './styledComponents/StyledComponents';
