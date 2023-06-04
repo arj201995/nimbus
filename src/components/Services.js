@@ -50,6 +50,7 @@ export const services = [{
 
 
 export const Services = () => {
+
     return <div className={classes.service__container}>
         <Box className={classes.service_img_container}>
 
@@ -70,6 +71,7 @@ export const Services = () => {
             {services.map((service, index) =>
                 <Reveal key={`${service.imgUrl}b-${index}`}>
                     <Card id={service.id} sx={{ display: 'flex', flexDirection: { md: `${index % 2 === 0 ? 'row-reverse' : 'row'}`, xs: "column" }, gap: '0.5rem', padding: '1rem' }}>
+
                         <CardMedia component="img" alt={service.title} src={service.imgUrl} loading="lazy" sx={{ width: { sm: '30%', xs: "100%" } }} />
                         <CardContent>
                             <Typography variant="h4" fontFamily="Titan One" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' }, marginBottom: { xs: '0.5rem' }, textAlign: { xs: 'center', md: 'justify' } }} >{service.title}</Typography>
