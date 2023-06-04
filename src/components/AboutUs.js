@@ -65,7 +65,7 @@ export const AboutUs = () => {
 
             <StyledCard elevation={6}>
                 <CardContent>
-                    <Box>
+                    <Box mt={6}>
                         <Typography variant="h3" align='center' className={classes.aboutus_font} >About Us</Typography>
                         <Box className={classes.aboutus_content} >
                             <Typography variant='h6' className={classes.aboutuscard_details} >

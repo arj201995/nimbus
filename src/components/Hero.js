@@ -1,6 +1,23 @@
 import { Typography, Slide } from '@mui/material'
 import classes from '../styles/home.module.css'
 import Poster from '../assets/poster.webp'
+import { motion } from 'framer-motion'
+
+const imageVariants = {
+    hidden: {
+        opacity: 0,
+        y: '100vw'
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: 'spring',
+            duration: 1,
+            delay: 1,
+        }
+    }
+}
 
 const Video = props => {
     // const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -30,7 +47,7 @@ const Video = props => {
     );
 };
 
-export const Hero = ({ video, primary, secondary }) => {
+export const Hero = ({ video, primary, secondary, logo }) => {
 
 
     return <div className={classes.lpage}>
@@ -42,6 +59,9 @@ export const Hero = ({ video, primary, secondary }) => {
                     <Typography variant="h3" fontWeight="bold">{primary}</Typography>
                     <Typography variant="h4" fontWeight="bold">{secondary}
                     </Typography>
+                    <motion.div className={classes.logo__container} variants={imageVariants} initial="hidden" animate="visible">
+                        {logo && <img src={logo} alt="Nimbus Superior Logo" className={classes.logo_withbg} />}
+                    </motion.div>
                 </div>
             </Slide>
         </div>

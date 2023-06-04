@@ -32,10 +32,11 @@ export const StyledMenu = styled(Menu)({
 const ImgVariants = {
     hidden: {
         opacity: 0,
+        scale:2
     },
     visible: {
         opacity: 1,
-        scale: 1.3,
+        scale: 1,
         transition: {
             duration: 1
         }

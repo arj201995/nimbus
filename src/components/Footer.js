@@ -20,8 +20,8 @@ export const Footer = () => {
                         <Typography variant="h7" component="a" href="tel:+1 (214) 613-8150" className={classes.link}>
                             +1 (214) 613-8150
                         </Typography>
-                        <Typography variant="h7" component="a" href="tel:+1 (214) 613-8150" className={classes.link}>
-                            +1 (214) 613-8150
+                        <Typography variant="h7" component="a" href="tel:+1 (218) 321-8481" className={classes.link}>
+                            +1 (218) 321-8481
                         </Typography>
                     </Box>
                 </Box>
