@@ -5,6 +5,8 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { StyledButton } from './styledComponents/StyledComponents';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Reveal } from './Reveal';
 
 const StyledCard = styled(Card)(({ theme }) => ({
     display: 'flex', width: '90%', margin: 'auto', marginTop: '0.5rem',
@@ -37,6 +39,19 @@ const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
 }))
 
 
+const variantButton = {
+    hover: {
+        scale: 1.1,
+        boxShadow: '0px 0px 8px 0px black',
+        textShadow: '0px 0px 8px 0px black',
+        transition: {
+            duration: 0.3,
+            yoyo: Infinity
+        }
+    }
+};
+
+
 export const AboutUs = () => {
 
     const navigate = useNavigate()
@@ -46,42 +61,48 @@ export const AboutUs = () => {
     }
 
     return <div className={classes.aboutus} >
-        <StyledCard elevation={6}>
-            <CardContent>
-                <Box>
-                    <Typography variant="h3" align='center' className={classes.aboutus_font} >About Us</Typography>
-                    <Box className={classes.aboutus_content} >
-                        <Typography variant='h6' className={classes.aboutuscard_details} >
-                            Welcome to Nimbus Superior, your trusted partner in Recruitment Outsourcing. We are a dedicated team of experts who are passionate about revolutionizing the way organizations attract, engage, and retain top talent.
-                        </Typography>
-                        <StyledButton variant='contained' endIcon={<ArrowRightAltIcon />} fullWidth size="small" sx={{ fontWeight: 'bold', marginTop: '4rem' }} onClick={NavigateToDetails} >
-                            Know Us More
-                        </StyledButton>
+        <Reveal>
+
+            <StyledCard elevation={6}>
+                <CardContent>
+                    <Box>
+                        <Typography variant="h3" align='center' className={classes.aboutus_font} >About Us</Typography>
+                        <Box className={classes.aboutus_content} >
+                            <Typography variant='h6' className={classes.aboutuscard_details} >
+                                Welcome to Nimbus Superior, your trusted partner in Recruitment Outsourcing. We are a dedicated team of experts who are passionate about revolutionizing the way organizations attract, engage, and retain top talent.
+                            </Typography>
+                            <StyledButton variant='contained' component={motion.button} variants={variantButton} whileHover="hover" endIcon={<ArrowRightAltIcon />} fullWidth size="small" sx={{ fontWeight: 'bold', marginTop: '4rem' }} onClick={NavigateToDetails} >
+                                Know Us More
+                            </StyledButton>
+                        </Box>
                     </Box>
-                </Box>
-            </CardContent>
-            <StyledCardMedia component="img" alt="about us" src={AboutUsImg} />
-        </StyledCard>
-        <Card className={classes.ceo}>
-            <div className={classes.abouttheceo}>
-                <Typography variant="h6">
-                    "You want to know the secret to why some people are so Blessed? They give. They support. They're the person who always says yes. They give their time. They give a ride. They lend a shoulder to lean on and a ear to listen. Always there for other people's problems. Always giving encouragement. Would give the clothes off their back and their last dollar. Teach people the proper ways to making money. Get them jobs. Forgive debts. Be loyal! And the list goes on...
+                </CardContent>
+                <StyledCardMedia component="img" alt="about us" src={AboutUsImg} />
+            </StyledCard>
+        </Reveal>
+        <Reveal>
+            <Card className={classes.ceo}>
+                <div className={classes.abouttheceo}>
+                    <Typography variant="h6">
+                        "You want to know the secret to why some people are so Blessed? They give. They support. They're the person who always says yes. They give their time. They give a ride. They lend a shoulder to lean on and a ear to listen. Always there for other people's problems. Always giving encouragement. Would give the clothes off their back and their last dollar. Teach people the proper ways to making money. Get them jobs. Forgive debts. Be loyal! And the list goes on...
 
-                    See, you don't know how other folks entertain strangers unaware and do good deeds for their families and friends. You don't know the good hearts of the people who get judged but GOD does and he rewards them openly. So, when you see the person beside you prosper just know that’s the RIGHTEOUS GOD!!!
+                        See, you don't know how other folks entertain strangers unaware and do good deeds for their families and friends. You don't know the good hearts of the people who get judged but GOD does and he rewards them openly. So, when you see the person beside you prosper just know that’s the RIGHTEOUS GOD!!!
 
-                    To the people who have good hearts and you seem to go unnoticed, done wrong, misjudged, used & abused.
+                        To the people who have good hearts and you seem to go unnoticed, done wrong, misjudged, used & abused.
 
-                    GOD ALWAYS GOT YOU!!"
-                </Typography>
-                <Box sx={{ display: 'flex', flexDirection: 'column', marginTop: '0.5rem' }} >
-                    <Typography variant="h5" fontWeight="bold" align="center">
-                        Founder CEO
+                        GOD ALWAYS GOT YOU!!"
                     </Typography>
-                    <Typography variant="h5" fontWeight="bold" align='center'>
-                        Rahul (Jesse) Dinkar
-                    </Typography>
-                </Box>
-            </div>
-        </Card>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', marginTop: '0.5rem' }} >
+                        <Typography variant="h5" fontWeight="bold" align="center">
+                            Founder CEO
+                        </Typography>
+                        <Typography variant="h5" fontWeight="bold" align='center'>
+                            Rahul (Jesse) Dinkar
+                        </Typography>
+                    </Box>
+                </div>
+            </Card>
+        </Reveal>
+
     </div>
 }

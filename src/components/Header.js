@@ -11,12 +11,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from '../assets/logo.webp'
 import classes from '../styles/header.module.css'
 import { routes } from '../utils/routes';
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Menus } from './Menus';
 import styled from '@emotion/styled';
 import { Dialog, Slide } from '@mui/material';
 
 import CloseIcon from '@mui/icons-material/Close';
+import { motion } from 'framer-motion';
 
 
 export const StyledMenu = styled(Menu)({
@@ -28,6 +29,29 @@ export const StyledMenu = styled(Menu)({
     }
 })
 
+const ImgVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        scale: 1.3,
+        transition: {
+            duration: 1
+        }
+    }
+}
+
+const variantButton = {
+    hover: {
+        scale: 1.1,
+        transition: {
+            duration: 0.3,
+            yoyo: Infinity
+        }
+    }
+};
+
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -36,6 +60,8 @@ export const Header = () => {
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [open, setOpen] = React.useState(false);
+
+    const navigate = useNavigate();
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -52,20 +78,27 @@ export const Header = () => {
     };
 
 
+
     const handleCloseUserMenu = () => {
         setAnchorEl(null)
         setAnchorElUser(null);
     };
 
+    const navigateToHome = () => {
+        navigate('/')
+    }
+
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img src={Logo} className={classes.logo} alt="Nimbus Superior" />
+                    <motion.div variants={ImgVariants} initial="hidden" animate="visible" onClick={navigateToHome} style={{ cursor: 'pointer' }} >
+                        <img src={Logo} className={classes.logo} alt="Nimbus Superior" />
+                    </motion.div>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
                         {!open && <IconButton
                             size="large"
-                            aria-label="account of current user"
+                            aria-label="menu-icon"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleClickOpen}
@@ -107,10 +140,10 @@ export const Header = () => {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', marginRight: '3rem' }}>
                         {routes.map((route) => (
-                            <div>
-
+                            <motion.div key={route.name} variants={variantButton}
+                                whileHover="hover"
+                            >
                                 <Button
-                                    key={route.name}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                     component={NavLink}
                                     to={route.link}
@@ -118,7 +151,7 @@ export const Header = () => {
                                 >
                                     {route.name}
                                 </Button>
-                            </div>
+                            </motion.div>
                         ))}
                         <Menus anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
                     </Box>

@@ -20,6 +20,6 @@ export const StyledMenuItem = styled(MenuItem)({
         borderBottom: '1px solid white',
         background: '#ffffff',
         textAlign: 'center',
-        padding: '4rem'
+        padding: '4rem',
     }
 })

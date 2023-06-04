@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Titan+One&display=swap');
-
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f4f4f4;
+  background: rgb(244, 244, 244);
+  background: linear-gradient(180deg, rgba(244, 244, 244, 1) 14%, rgba(242, 242, 242, 1) 51%);
 }
 
 code {

@@ -1,6 +1,7 @@
 import { Box } from "@mui/material"
 import { ImageMasonry } from "./Masonary"
 import styled from "@emotion/styled"
+import { Reveal } from "./Reveal"
 
 export const Departments = () => {
 
@@ -15,7 +16,12 @@ export const Departments = () => {
     }))
 
     return <Box>
-        <StyledTypography variant="h3">Who We Serve</StyledTypography>
-        <ImageMasonry />
+        <Reveal>
+            <StyledTypography variant="h3">Who We Serve</StyledTypography>
+        </Reveal>
+        <Reveal>
+            <ImageMasonry />
+        </Reveal>
+
     </Box>
 }

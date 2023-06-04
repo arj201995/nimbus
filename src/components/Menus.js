@@ -3,6 +3,21 @@ import MenuItem from '@mui/material/MenuItem';
 import { services } from './Services';
 import { useNavigate } from 'react-router-dom';
 import { StyledMenu } from './styledComponents/StyledComponents';
+import { motion } from 'framer-motion';
+
+
+
+const variantMenu = {
+    hover: {
+        scale: 1.1,
+        fontWeight: 'bold',
+        originX: 0,
+        transition: {
+            duration: 0.8,
+            yoyo: Infinity
+        }
+    }
+}
 
 
 export const Menus = ({ anchorEl, setAnchorEl }) => {
@@ -11,9 +26,9 @@ export const Menus = ({ anchorEl, setAnchorEl }) => {
 
     const navigate = useNavigate()
 
-    const handleClose = (event) => {
+    const handleClose = (event, id) => {
         if (event.target.role === 'menuitem')
-            navigate('/services')
+            navigate(`/services`)
         setAnchorEl(null);
     };
 
@@ -37,14 +52,19 @@ export const Menus = ({ anchorEl, setAnchorEl }) => {
                 }}
             >
                 {
-                    services.map(service => <MenuItem key={`${service.title}+a`} onClick={handleClose} sx={{
-                        margin: 'auto',
-
-                    }} >{service.title}</MenuItem>
+                    services.map(service => <MenuItem component={motion.li}
+                        key={`${service.title}+a`}
+                        onClick={(event) => handleClose(event, service.id)}
+                        sx={{
+                            margin: 'auto',
+                        }}
+                        variants={variantMenu}
+                        whileHover="hover"
+                    > {service.title}</MenuItem>
                     )
                 }
 
             </StyledMenu>
-        </div>
+        </div >
     );
 }

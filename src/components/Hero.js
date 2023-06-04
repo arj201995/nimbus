@@ -1,12 +1,11 @@
 import { Typography, Slide } from '@mui/material'
 import classes from '../styles/home.module.css'
-
+import Poster from '../assets/poster.webp'
 export const Hero = ({ video, primary, secondary }) => {
 
 
-
     return <div className={classes.lpage}>
-        {<video src={video} preload="none" autoPlay muted loop className={classes.bgvideo} />}
+        <video src={video} preload="none" poster={Poster} autoPlay muted loop className={classes.bgvideo} />
         <div className={classes.bgoverlay}>
             <Slide direction="down" in={true} timeout={800} mountOnEnter unmountOnExit>
                 <div className={classes.text}>

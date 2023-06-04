@@ -5,8 +5,9 @@
 }
 
 .footer__logo {
-    height: 8rem;
+    height: 6rem;
     margin-bottom: 0.5rem;
+    width: 6rem;
 }
 
 .link {
