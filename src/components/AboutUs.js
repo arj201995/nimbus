@@ -69,7 +69,7 @@ export const AboutUs = () => {
                         <Typography variant="h3" align='center' className={classes.aboutus_font} >About Us</Typography>
                         <Box className={classes.aboutus_content} >
                             <Typography variant='h6' className={classes.aboutuscard_details} >
-                                Welcome to Nimbus Superior, your trusted partner in Recruitment Outsourcing. We are a dedicated team of experts who are passionate about revolutionizing the way organizations attract, engage, and retain top talent.
+                                Welcome to MindSuperior Consult, your trusted partner in Recruitment Outsourcing. We are a dedicated team of experts who are passionate about revolutionizing the way organizations attract, engage, and retain top talent.
                             </Typography>
                             <StyledButton variant='contained' component={motion.button} variants={variantButton} whileHover="hover" endIcon={<ArrowRightAltIcon />} fullWidth size="small" sx={{ fontWeight: 'bold', marginTop: '4rem' }} onClick={NavigateToDetails} >
                                 Know Us More
@@ -77,7 +77,7 @@ export const AboutUs = () => {
                         </Box>
                     </Box>
                 </CardContent>
-                <StyledCardMedia component="img" alt="about us" src={AboutUsImg} />
+                <StyledCardMedia height={500} width={300} component="img" alt="about us" src={AboutUsImg} />
             </StyledCard>
         </Reveal>
         <Reveal>

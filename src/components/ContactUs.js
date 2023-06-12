@@ -28,8 +28,8 @@ export const ContactUs = () => {
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }} >
                         <EmailIcon />
-                        <Typography variant="h5" fontWeight="bold" component="a" href="mailTo:info@nimbussuperior.com" className={classes.link}>
-                            info@nimbussuperior.com
+                        <Typography variant="h5" fontWeight="bold" component="a" href="mailTo:info@mindsuperiorconsult.com" className={classes.link}>
+                            info@mindsuperiorconsult.com
                         </Typography>
                     </Box>
                 </Box>

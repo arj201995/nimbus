@@ -72,7 +72,7 @@ export const ImageMasonry = () => {
     return <Grid container spacing={2} my={2}>
         {
             departments.map((department, index) => <Grid item key={`${department.imgUrl}#-${index}`} md={3} xs={4}>
-                <Card sx={{ maxWidth: 340 }} elevation={4}>
+                <Card sx={{ maxWidth: 340 }}>
                     <CardMedia
                         sx={{ height: { md: 200, xs: 100 } }}
                         image={department.imgUrl}

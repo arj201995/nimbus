@@ -31,12 +31,12 @@ export const AboutUsDetails = () => {
                     <Typography variant="h3" fontFamily="Titan One" align="center" my={2}>About Us</Typography>
                     <Typography variant="h5" fontFamily="Titan One" align="center" mb={5}>Finding Inspiration in Every Turn</Typography>
                     <Typography variant="h7" sx={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: '1.6rem' }} >
-                        Welcome to Nimbus Superior, your trusted partner in Recruitment Outsourcing.
+                        Welcome to MindSuperior Consult, your trusted partner in Recruitment Outsourcing.
                         We are a dedicated team of experts who are passionate about revolutionizing the
                         way organizations attract, engage, and retain top talent. With our strategic
                         approach and industry-leading expertise, we are committed to helping you build
                         a high-performing workforce that drives sustainable growth and success.
-                        At Nimbus Superior, we understand that finding and hiring the right talent is crucial
+                        At MindSuperior Consult, we understand that finding and hiring the right talent is crucial
                         for organizations to thrive in today's competitive landscape. However, the
                         traditional recruitment process can be time-consuming, resource-intensive, and
                         often falls short of delivering the desired results. That's where we come in. We offer
@@ -72,7 +72,7 @@ export const AboutUsDetails = () => {
                 <StyledCardMedia component="img" alt="us" src={Trust} />
                 < CardContent sx={{ width: { sm: '90%', md: '100%', lg: '100%' } }}>
                     <Typography variant="h7" sx={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: '1.6rem' }} >
-                        At Nimbus Superior, we are not just another vendor; we are your strategic partner in talent acquisition. We are committed to building a long-lasting relationship based on trust, transparency, and collaboration. We keep you informed every step of the way, providing real-time updates, analytics, and insights that enable data-driven decision-making. Our partnership extends beyond recruitment; we offer ongoing support, guidance, and expertise to help you navigate the ever-changing talent landscape.
+                        At MindSuperior Consult, we are not just another vendor; we are your strategic partner in talent acquisition. We are committed to building a long-lasting relationship based on trust, transparency, and collaboration. We keep you informed every step of the way, providing real-time updates, analytics, and insights that enable data-driven decision-making. Our partnership extends beyond recruitment; we offer ongoing support, guidance, and expertise to help you navigate the ever-changing talent landscape.
 
 
 
@@ -80,11 +80,11 @@ export const AboutUsDetails = () => {
 
 
 
-                        At Nimbus Superior, we measure our success by your success. We take pride in the positive impact we make on your organization – helping you attract and retain top talent, reduce time-to-fill, improve quality of hire, and enhance your employer brand. Our dedication to excellence, integrity, and delivering measurable results has earned us the trust of organizations across various sectors.
+                        At MindSuperior Consult, we measure our success by your success. We take pride in the positive impact we make on your organization – helping you attract and retain top talent, reduce time-to-fill, improve quality of hire, and enhance your employer brand. Our dedication to excellence, integrity, and delivering measurable results has earned us the trust of organizations across various sectors.
 
 
 
-                        Thank you for choosing Nimbus Superior as your partner. We are excited to embark on this transformative journey with you, revolutionizing your recruitment processes and driving your organization towards a future of sustainable growth and success. Together, we will build a workforce that sets new standards of excellence and positions your organization as an employer of choice in the industry.
+                        Thank you for choosing MindSuperior Consult as your partner. We are excited to embark on this transformative journey with you, revolutionizing your recruitment processes and driving your organization towards a future of sustainable growth and success. Together, we will build a workforce that sets new standards of excellence and positions your organization as an employer of choice in the industry.
                     </Typography>
                 </CardContent>
             </StyledCard>

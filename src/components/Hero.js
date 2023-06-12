@@ -60,7 +60,7 @@ export const Hero = ({ video, primary, secondary, logo }) => {
                     <Typography variant="h4" fontWeight="bold">{secondary}
                     </Typography>
                     <motion.div className={classes.logo__container} variants={imageVariants} initial="hidden" animate="visible">
-                        {logo && <img src={logo} alt="Nimbus Superior Logo" className={classes.logo_withbg} />}
+                        {logo && <img src={logo} alt="MindSuperior Consult Logo" className={classes.logo_withbg} />}
                     </motion.div>
                 </div>
             </Slide>

@@ -32,7 +32,7 @@ export const StyledMenu = styled(Menu)({
 const ImgVariants = {
     hidden: {
         opacity: 0,
-        scale:2
+        scale: 2
     },
     visible: {
         opacity: 1,
@@ -93,8 +93,8 @@ export const Header = () => {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <motion.div variants={ImgVariants} initial="hidden" animate="visible" onClick={navigateToHome} style={{ cursor: 'pointer' }} >
-                        <img src={Logo} className={classes.logo} alt="Nimbus Superior" />
+                    <motion.div variants={ImgVariants} initial="hidden" animate="visible" onClick={navigateToHome} style={{ cursor: 'pointer', borderRadius: "50%" }} >
+                        <img src={Logo} className={classes.logo} alt="MindSuperior Consult" />
                     </motion.div>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
                         {!open && <IconButton

@@ -4,7 +4,7 @@ import { Departments } from "../components/Departments"
 import { Hero } from "../components/Hero"
 import BgVideo from '../assets/bgvideo.mp4'
 import { motion } from 'framer-motion'
-import LogoBg from '../assets/logowithbg.webp'
+import LogoBg from '../assets/logo.webp'
 
 const containerVariant = {
     hidden: { opacity: 0, },
@@ -22,12 +22,10 @@ const containerVariant = {
 
 }
 
-
-
 const Home = () => {
 
     return <motion.div style={{ display: 'flex', flexDirection: 'column' }} variants={containerVariant} initial="hidden" animate="visible">
-        <Hero video={BgVideo} primary="Nimbus Superior" secondary="Excellence Delivered, Satisfication Guranteed" logo={LogoBg} />
+        <Hero video={BgVideo} primary="MindSuperior Consult" secondary="Excellence Delivered, Satisfication Guranteed" logo={LogoBg} />
         <Box mx={2}>
             <AboutUs />
             <Divider />

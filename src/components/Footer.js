@@ -27,8 +27,8 @@ export const Footer = () => {
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }} >
                     <EmailIcon />
-                    <Typography variant="h7" component="a" href="mailTo:info@nimbussuperior.com" className={classes.link}>
-                        info@nimbussuperior.com
+                    <Typography variant="h7" component="a" href="mailTo:info@mindsuperiorconsult.com" className={classes.link}>
+                        info@mindsuperiorconsult.com
                     </Typography>
                 </Box>
             </Box>
@@ -54,7 +54,7 @@ export const Footer = () => {
             <Typography variant="h7" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }} >
                 Copyright © 2022-23. All rights reserved.
                 <Box component="span" sx={{ textDecoration: 'underline' }} >
-                    Nimbus Superior
+                    MindSuperior Consult
                 </Box>
             </Typography>
         </Grid>

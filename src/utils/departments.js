@@ -97,7 +97,7 @@ export const departments = [
     },
     {
         imgUrl: require('../assets/departments/oils.webp'),
-        title: 'Oils Industry'
+        title: 'Oil And Gas Industry'
     },
     {
         imgUrl: require('../assets/departments/aviations.webp'),
